@@ -1,1 +1,1 @@
-python3 my_compute.py > a.txt
+python3 my_compute.py input.nfg a.txt

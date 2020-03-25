@@ -15,12 +15,13 @@ def extract():
 	global payoff_matrix
 	global payoff_matrix_index
 	global multiplier
-	game = open('./input.nfg','r')
+	filename = sys.argv[1]
+	game = open(filename, 'r')
 	first_line = game.readline()
 	second_line = game.readline()
 	third_line = game.readline()
 	fourth_line = game.readline()
-
+	game.close()
 	# computing number of players
 	for character in second_line:
 		if character == '}':	
@@ -106,6 +107,7 @@ def find_dominant_strategy(cur_player, other_players, other_actions):
 def main():
 	extract()
 	equilibria = []
+	output = open(sys.argv[2], 'w')
 	for i in range(players):
 		other_players = players_list[:]
 		other_players.pop(i)
@@ -113,7 +115,8 @@ def main():
 		other_actions.pop(i)
 		i_dominant = find_dominant_strategy(i, other_players,other_actions)
 		if len(i_dominant) == 0:
-			print("No Dominant Strategy Equilibria exist")
+			output.write("No Dominant Strategy Equilibria exist\n")
+			output.close()	
 			return
 		else:
 			equilibria.append(i_dominant)
@@ -122,11 +125,12 @@ def main():
 	for i in itertools.product(*equilibria):
 		result.append(i)
 	result.sort()	
-	print(len(result))
+	output.write(str(len(result)) + "\n")
 	for element in result:
 		for i in range(len(element)):
-			print(element[i], end=' ')
-		print()	
-
+			arg = str(element[i]) + " "
+			output.write(arg)
+		output.write("\n")	
+	output.close()	
 
 main()	
