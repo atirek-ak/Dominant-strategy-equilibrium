@@ -1,5 +1,5 @@
 # Dominant-strategy-equilibrium
-Displays all dominant strategy equilibriums for a n-player game
+Displays all dominant strategy equilibria for a n-player game
 
 ## Language and modules  
 **Language:** python3  
