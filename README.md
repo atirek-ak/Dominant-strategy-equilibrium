@@ -19,7 +19,7 @@ and A is the product of the number of actions available to each player
 
 ## To run  
 ```
-python3 my_compute.py
+./run <input file> <output file>
 ```
 ## Author  
 Atirek Kumar  
