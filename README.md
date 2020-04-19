@@ -1,5 +1,5 @@
 # Dominant-strategy-equilibrium
-Displays all dominant strategy equilibria for a n-player game
+Displays all dominant strategy equilibria for a n-player game which takes input from a .nfg file
 
 ## Language and modules  
 **Language:** python3  
@@ -17,6 +17,10 @@ The complexity is O(N * A).
 where N is the number of players  
 and A is the product of the number of actions available to each player
 
+## To run  
+```
+python3 my_compute.py
+```
 ## Author  
 Atirek Kumar  
 Roll no: 20171060  
