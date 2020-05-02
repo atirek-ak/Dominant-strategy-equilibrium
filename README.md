@@ -3,7 +3,7 @@ Displays all dominant strategy equilibria for a n-player game which takes input 
 
 ## Language and modules  
 **Language:** python3  
-**Modules imported:**  
+**Modules:**  
 * sys
 * numpy
 * itertools
@@ -23,5 +23,4 @@ and A is the product of the number of actions available to each player
 ```
 ## Author  
 Atirek Kumar  
-Roll no: 20171060  
-Team number: 7  
+Github handle: atirek-ak
